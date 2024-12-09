@@ -1,0 +1,75 @@
+.container-intro {
+  width: 100%;
+  overflow: hidden; /* Oculta os itens fora do contêiner */
+}
+
+.left-to-right {
+  display: flex;
+  width: calc(200%);
+  animation: scroll-left 15s linear infinite; /* Animação contínua */
+}
+
+.left-to-right img {
+  max-width: 835px;
+  height: auto;
+}
+
+.scroll-item {
+  margin-left: -100px;
+}
+
+/* Animação contínua */
+@keyframes scroll-left {
+  from {
+    transform: translateX(0); /* Posição inicial */
+  }
+  to {
+    transform: translateX(-57.4%); /* Move até o fim do conteúdo original */
+  }
+}
+
+.container-intro {
+  height: 100vh;
+  position: relative;
+}
+
+.background-intro-svg {
+  background: linear-gradient(183.15deg, #a684b0 40.55%, #ffffff 97.3%);
+  top: 0px;
+  position: absolute;
+  z-index: -1;
+}
+
+.enter-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 41px;
+}
+
+.enter-button {
+  display: flex;
+  align-items: center;
+  font-family: OT Neue Montreal Bold Semi Squeezed;
+  font-size: 40px;
+  font-weight: 700;
+  border: 1px solid black;
+  border-radius: 100px;
+  padding: 4px 40px;
+  gap: 8px;
+  margin-right: 30px;
+  margin-left: 30px;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+
+.enter-button span {
+  font-family: OT Neue Montreal Book Semi Squeezed;
+  font-weight: 400;
+}
+
+.enter-button:hover {
+  color: white;
+  background-color: black;
+}

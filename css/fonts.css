@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "OT Neue Montreal Book Squeezed";
+  src: url("../assets/fonts/OTNeueMontreal-BookSqueezed.otf");
+}
+
+@font-face {
+  font-family: "OT Neue Montreal Book Semi Squeezed";
+  src: url("../assets/fonts/OTNeueMontreal-BookSemiSqueezed.otf");
+}
+
+@font-face {
+  font-family: "OT Neue Montreal Bold Squeezed";
+  src: url("../assets/fonts/OTNeueMontreal-BoldSqueezed.otf");
+}
+
+@font-face {
+  font-family: "OT Neue Montreal Bold Semi Squeezed";
+  src: url("../assets/fonts/OTNeueMontreal-BoldSemiSqueezed.otf");
+}
+
+@font-face {
+  font-family: "OT Neue Montreal Bold Italic Semi Squeezed";
+  src: url("../assets/fonts/OTNeueMontreal-BoldItalicSemiSqueezed.otf");
+}

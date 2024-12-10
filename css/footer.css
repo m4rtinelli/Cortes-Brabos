@@ -1,4 +1,6 @@
 .footer-home {
+  display: flex;
+  align-items: center;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -16,6 +18,10 @@
 
 .footer-wrapper {
   display: flex;
+}
+
+.footer-wrapper img {
+  height: 400px;
 }
 
 @keyframes scroll-left {

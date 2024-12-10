@@ -5,20 +5,20 @@
 
 .home-container {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   overflow-x: hidden;
+  z-index: 2;
+  margin-bottom: 447px;
 }
 
 .home-carrossel {
   display: flex;
   width: 100%;
-  height: 100%;
 }
 
 .image-home-wrapper {
   flex-shrink: 0;
   width: 100%;
-  height: 100%;
 }
 
 .image-home-wrapper img {

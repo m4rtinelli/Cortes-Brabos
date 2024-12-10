@@ -1,8 +1,9 @@
 .main-gallery {
   justify-self: center;
   padding-top: 200px;
-  margin: 0 32px;
+  padding: 200px 32px 0px 32px;
   max-width: 100%;
+  background-color: white;
 }
 
 .gallery-wrapper {
@@ -11,18 +12,21 @@
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(3);
   column-gap: 12px;
+  background-color: white;
 }
 
 .img-gallery-container {
   max-width: 454px;
   height: 680px;
   object-fit: cover;
+  position: relative;
 }
 
 .img-gallery-container img {
   max-height: 680px;
   height: auto;
   object-fit: cover;
+  transition: filter 0.3s ease;
 }
 
 .gallery-wrapper div:nth-child(1) {
@@ -80,4 +84,65 @@
   width: 454px;
   grid-column: 9 / 12;
   grid-row: 3;
+}
+
+.img-gallery-container.gallery-hover img {
+  filter: blur(5px);
+  transition: filter 0.3s ease;
+}
+
+.gallery-work-info {
+  margin-top: 0px !important;
+  position: absolute;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  font-family: OT Neue Montreal Bold Semi Squeezed;
+  font-size: 30px;
+  color: white;
+  mix-blend-mode: difference;
+  margin-top: 26px;
+  margin-left: 26px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.active {
+  opacity: 1;
+}
+
+/* slider */
+
+.extra-works-wrapper {
+  padding-top: 136px;
+  background-color: white;
+  margin-bottom: 550px;
+}
+
+.works-slider-container {
+  display: flex;
+  gap: 12px;
+  padding-bottom: 210px;
+}
+
+.nav-slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 72px;
+}
+
+.carrossel-title {
+  font-family: OT Neue Montreal Book Semi Squeezed;
+  font-size: 50px;
+  margin-bottom: 32px;
+  margin-left: 182px;
+}
+
+.works-nav-back {
+  cursor: pointer;
+}
+
+.works-nav-forw {
+  cursor: pointer;
 }

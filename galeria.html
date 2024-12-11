@@ -4,6 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!--  -->
   <title>Cortes Brabos | Galeria</title>
   <link rel="stylesheet" href="/style.css">
 </head>
@@ -111,27 +114,35 @@
     <div class="carrossel-title">
       <p>Outros projetos</p>
     </div>
-    <div class="nav-slider-container">
+    <div class="nav-slider-container swiper">
       <div class="works-nav-back">
         <img src="./assets/imagens/arrow_right_alt.svg" alt="">
       </div>
+      <div class="carrossel-limiter">
+        <ul class="works-slider-container swiper-wrapper">
 
-      <ul class="works-slider-container">
+          <li class="work-item swiper-slide"><a href=""><img src="./assets/imagens/galeria extra/extra-1.jpg" alt=""></a>
+          </li>
+          <li class="work-item swiper-slide"><a href=""><img src="./assets/imagens/galeria extra/extra-2.png" alt=""></a>
+          </li>
+          <li class="work-item swiper-slide"><a href=""><img src="./assets/imagens/galeria extra/extra-3.jpg" alt=""></a>
+          </li>
+          <li class="work-item swiper-slide"><a href=""><img src="./assets/imagens/galeria extra/extra-4.jpg" alt=""></a>
+          </li>
+          <li class="work-item swiper-slide"><a href=""><img src="./assets/imagens/galeria extra/extra-5.jpg" alt=""></a>
+          </li>
+          <li class="work-item swiper-slide"><a href=""><img src="./assets/imagens/galeria extra/extra-5.jpg" alt=""></a>
+          </li>
+          <li class="work-item swiper-slide"><a href=""><img src="./assets/imagens/galeria extra/extra-5.jpg" alt=""></a>
+          </li>
+          <li class="work-item swiper-slide"><a href=""><img src="./assets/imagens/galeria extra/extra-5.jpg" alt=""></a>
+          </li>
+        </ul>
 
-        <li class="work-item"><a href=""><img src="./assets/imagens/galeria extra/extra-1.jpg" alt=""></a>
-        </li>
-        <li class="work-item"><a href=""><img src="./assets/imagens/galeria extra/extra-2.png" alt=""></a>
-        </li>
-        <li class="work-item"><a href=""><img src="./assets/imagens/galeria extra/extra-3.jpg" alt=""></a>
-        </li>
-        <li class="work-item"><a href=""><img src="./assets/imagens/galeria extra/extra-4.jpg" alt=""></a>
-        </li>
-        <li class="work-item"><a href=""><img src="./assets/imagens/galeria extra/extra-5.jpg" alt=""></a>
-        </li>
+      </div>
 
-      </ul>
 
-      <div class="works-nav-forw">
+      <div class="works-nav-forw ">
         <img src="./assets/imagens/arrow_right_alt-2.svg" alt="">
       </div>
 
@@ -158,8 +169,15 @@
 
   </footer>
 
+  <!-- swiper -->
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script src="script.js"></script>
+  <!--  -->
   <script src="./js/langSelect.js"></script>
   <script src="./js/gallery.js"></script>
+
 
 
 

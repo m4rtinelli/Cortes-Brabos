@@ -119,13 +119,19 @@
   margin-bottom: 550px;
 }
 
+.work-item {
+  list-style: none;
+  text-align: center;
+}
+
 .works-slider-container {
   display: flex;
-  gap: 12px;
-  padding-bottom: 210px;
+  width: 80vw;
 }
 
 .nav-slider-container {
+  position: relative;
+  padding-bottom: 210px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -141,8 +147,15 @@
 
 .works-nav-back {
   cursor: pointer;
+  margin-left: 32px;
 }
 
 .works-nav-forw {
   cursor: pointer;
+  margin-right: 32px;
+}
+
+.carrossel-limiter {
+  max-width: 80vw;
+  overflow: hidden;
 }

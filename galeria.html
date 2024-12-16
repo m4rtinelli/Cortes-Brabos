@@ -30,7 +30,13 @@
   </header>
 
   <!-- galeria de imagens  -->
-  <main class="main-gallery">
+  <div class="list-switch">
+    <span>Lista</span>
+    <span class="selected">▪Imagens</span>
+
+  </div>
+
+  <main class="main-gallery display-none">
     <div class="gallery-wrapper">
 
       <div class="img-gallery-container">
@@ -110,7 +116,7 @@
 
   </main>
 
-  <section class="extra-works-wrapper">
+  <section class="extra-works-wrapper display-none">
     <div class="carrossel-title">
       <p>Outros projetos</p>
     </div>
@@ -151,6 +157,28 @@
 
   </section>
 
+  <!-- listmode -->
+  <section class="list-mode">
+    <ul class="work-listmode-wrapper">
+      <li class="work-listmode-item" data-img="./assets/imagens/galeria/galeria-1.jpg"><a href="">Desfile Maxwell Alexandre + Pedra Preta</a></li>
+      <li class="work-listmode-item" data-img="./assets/imagens/galeria/galeria-2.jpg"><a href="">Desfile Dystopic Core Lab</a></li>
+      <li class="work-listmode-item" data-img="./assets/imagens/galeria/galeria-3.jpg"><a href="">Esportes que abandonei</a></li>
+      <li class="work-listmode-item" data-img="./assets/imagens/galeria/galeria-4.jpg"><a href="">DJ Bassan</a></li>
+      <li class="work-listmode-item" data-img="./assets/imagens/galeria/galeria-5.jpg"><a href="">DJ Alírio</a></li>
+      <li class="work-listmode-item" data-img="./assets/imagens/galeria/galeria-6.jpg"><a href="">Sinto Muito - Pelo Tosco</a></li>
+      <li class="work-listmode-item" data-img="./assets/imagens/galeria/galeria-7.jpg"><a href="">SKINS Pirygótik</a></li>
+      <li class="work-listmode-item" data-img="./assets/imagens/galeria/galeria-8.jpg"><a href="">ROMA</a></li>
+    </ul>
+
+    <div class="plus-icon-button">
+      <img src="./assets/imagens/plus-icon.svg" alt="Plus icon">
+    </div>
+
+    <div class="hover-image"><img src="" alt=""></div>
+
+  </section>
+  <!-- end listmode -->
+
   <footer class="footer-home ft-galeria">
 
     <div class="footer-contact">
@@ -177,6 +205,9 @@
   <!--  -->
   <script src="./js/langSelect.js"></script>
   <script src="./js/gallery.js"></script>
+  <script src="./js/listSwitch.js"></script>
+
+
 
 
 

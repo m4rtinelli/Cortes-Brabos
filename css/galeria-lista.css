@@ -1,0 +1,62 @@
+body {
+  overflow-x: hidden;
+}
+
+.list-switch {
+  position: absolute;
+  top: 116px;
+  z-index: 100;
+  right: 22px;
+  display: flex;
+  gap: 18px;
+}
+
+.list-switch span {
+  font-family: OT Neue Montreal Book Squeezed;
+  font-size: 60px;
+  cursor: pointer;
+}
+
+.list-mode {
+  padding-top: 280px;
+  height: max-content;
+  background-color: white;
+  margin-bottom: 550px;
+}
+
+.work-listmode-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  text-align: center;
+}
+
+.work-listmode-item:last-child {
+  border-bottom: none;
+}
+
+.work-listmode-item {
+  font-family: OT Neue Montreal Book Semi Squeezed;
+  font-size: 100px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid black;
+  justify-content: center;
+  width: 100vw;
+  position: relative;
+}
+
+.plus-icon-button {
+  justify-self: center;
+  padding-top: 52px;
+  cursor: pointer;
+}
+
+.hover-image {
+  position: fixed;
+  pointer-events: none;
+  display: none;
+  z-index: 10000;
+  width: 300px; /* Ajuste o tamanho da imagem conforme necessário */
+  height: 400px;
+  transition: transform 0.1s ease;
+}

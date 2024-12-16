@@ -20,6 +20,29 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-  // ----------------------------------------------------------------
-  // carrossel da galeria trabalhos extras
+
+  // hover img list
+
+  const workItems = document.querySelectorAll(".work-listmode-item");
+  const hoverImage = document.querySelector(".hover-image");
+
+  workItems.forEach((item) => {
+    const imageSrc = item.getAttribute("data-img");
+
+    item.addEventListener("mouseenter", () => {
+      hoverImage.style.display = "block";
+      hoverImage.style.backgroundImage = `url(${imageSrc})`;
+      hoverImage.style.backgroundSize = "cover";
+      hoverImage.style.backgroundPosition = "center";
+    });
+
+    item.addEventListener("mouseleave", () => {
+      hoverImage.style.display = "none";
+    });
+
+    item.addEventListener("mousemove", (e) => {
+      hoverImage.style.top = `${e.clientY + 10}px`; // Ajuste a posição para o hover
+      hoverImage.style.left = `${e.clientX + 10}px`;
+    });
+  });
 });

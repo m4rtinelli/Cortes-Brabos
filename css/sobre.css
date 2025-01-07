@@ -1,0 +1,57 @@
+.sobre-container {
+  background-color: #ccde65;
+  padding-top: 312px;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+}
+
+.bio-container {
+  margin-left: 30px;
+  max-width: 760px;
+}
+
+.bio-container p {
+  font-family: "OT Neue Montreal Book Semi Squeezed";
+  font-size: 2.4vw;
+}
+
+.negrito {
+  font-family: "OT Neue Montreal Bold Italic Semi Squeezed";
+}
+.e-mail-container {
+  margin-top: 40px;
+}
+
+.e-mail-container a {
+  font-family: "OT Neue Montreal Bold Squeezed";
+  font-size: 2.4vw;
+}
+
+.contato {
+  font-family: "OT Neue Montreal Book Semi Squeezed";
+  font-size: 2.4vw;
+  margin-left: 166px;
+}
+
+.telefone-wrapper {
+  display: grid;
+}
+
+.telefone-wrapper a {
+  font-family: "OT Neue Montreal Bold Squeezed";
+}
+
+.insta-wrapper {
+  display: grid;
+}
+
+.insta-wrapper a {
+  font-family: "OT Neue Montreal Bold Squeezed";
+}
+
+.imagem-sobre-container img {
+  max-height: 760px;
+  width: 30vw;
+}

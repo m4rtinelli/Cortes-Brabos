@@ -5,6 +5,7 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 2;
   background-color: #8387a3;
+  margin-bottom: 550px;
 }
 
 .work-info-wrapper {
@@ -41,6 +42,7 @@
   min-width: none;
   max-width: 456px;
   margin-right: 160px;
+  padding-bottom: 126px;
 }
 
 .work-description-title {
@@ -65,7 +67,7 @@
 }
 
 .carrossel-wrapper li img {
-  max-height: 800px;
+  max-height: 850px;
   width: auto;
   object-fit: cover;
   display: block;
@@ -79,6 +81,6 @@
 .carrossel-wrapper {
   display: flex;
   gap: 14px;
-  max-height: 800px;
+  max-height: 850px;
   width: max-content;
 }

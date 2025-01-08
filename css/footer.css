@@ -50,3 +50,20 @@
   background-color: white;
   padding-bottom: 12px;
 }
+
+.footer-home.ft-work-page {
+  background-color: #8387a3 !important;
+  background: linear-gradient(
+    0deg,
+    #ffffff 7.83%,
+    rgba(255, 255, 255, 0) 54.28%,
+    #ffffff 95.48%
+  );
+}
+
+.footer-home.ft-work-page .footer-contact {
+  border-top: 1px solid #000;
+  background-color: #8387a3;
+  padding-bottom: 16px;
+  padding-top: 16px;
+}

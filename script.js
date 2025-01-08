@@ -28,3 +28,19 @@ new Swiper(".carrossel-limiter", {
     },
   },
 });
+
+new Swiper(".work-carrossel-wrapper", {
+  loop: false,
+  slidesPerView: "auto",
+
+  freeMode: {
+    enabled: true,
+    sticky: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".car-work-nav-front",
+    prevEl: ".car-work-nav-back",
+  },
+});

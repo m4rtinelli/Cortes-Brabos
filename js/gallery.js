@@ -45,4 +45,23 @@ document.addEventListener("DOMContentLoaded", () => {
       hoverImage.style.left = `${e.clientX + 10}px`;
     });
   });
+
+  //   // ----------------------------------------------------------
+  //  funçao que faz o modo de lista mostrar mais trbalhos ao clicar no plus icon button
+  // // --------------------------------------------------------
+  const plusIconButton = document.querySelector(".plus-icon-button");
+
+  const initialItemsToShow = 8;
+
+  workItems.forEach((item, index) => {
+    if (index >= initialItemsToShow) {
+      item.style.display = "none";
+    }
+  });
+
+  plusIconButton.addEventListener("click", () => {
+    workItems.forEach((item) => {
+      item.style.display = "block";
+    });
+  });
 });

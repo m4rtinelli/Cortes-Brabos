@@ -36,3 +36,11 @@ header {
   width: 23vw;
   height: 100%;
 }
+
+.header-sobre {
+  background: linear-gradient(
+    0deg,
+    rgba(204, 222, 101, 0) 37.94%,
+    #ccde65 69.28%
+  );
+}

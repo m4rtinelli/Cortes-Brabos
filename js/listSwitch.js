@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const liToggle = document.getElementById("li-toggle");
   const imgToggle = document.getElementById("img-toggle");
   const extraWorksCarrossel = document.querySelector(".extra-works-wrapper");
+  const listModeHeader = document.querySelector(".header-galeria");
 
   listSelector.forEach((item) => {
     item.addEventListener("click", () => {
@@ -27,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
       listModeGallery.classList.remove("display-none");
       mainImageGallery.classList.add("display-none");
       extraWorksCarrossel.classList.add("display-none");
+      listModeHeader.classList.add("list-active");
     }
   });
 
@@ -35,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
       mainImageGallery.classList.remove("display-none");
       listModeGallery.classList.add("display-none");
       extraWorksCarrossel.classList.remove("display-none");
+      listModeHeader.classList.remove("list-active");
     }
   });
 });

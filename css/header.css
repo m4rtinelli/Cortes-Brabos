@@ -44,3 +44,7 @@ header {
     #ccde65 69.28%
   );
 }
+
+.header-galeria.list-active {
+  background: linear-gradient(0deg, rgba(204, 222, 101, 0) 37.94%, #fff 69.28%);
+}

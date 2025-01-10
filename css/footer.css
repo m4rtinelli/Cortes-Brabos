@@ -67,3 +67,19 @@
   padding-bottom: 16px;
   padding-top: 16px;
 }
+
+@media (max-width: 1140px) {
+  .footer-contact {
+    flex-direction: column;
+    border-bottom: 1px solid black;
+  }
+  .footer-contact a {
+    border-top: 1px solid #000;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .footer-wrapper {
+    margin-top: 150px;
+  }
+}

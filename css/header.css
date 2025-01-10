@@ -46,5 +46,146 @@ header {
 }
 
 .header-galeria.list-active {
-  background: linear-gradient(0deg, rgba(204, 222, 101, 0) 37.94%, #fff 69.28%);
+  background: linear-gradient(0deg, rgba(204, 222, 101, 0) 37.94%, #fff 50%);
+}
+
+/* mobile */
+/* ---------------------------- */
+/*  */
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+.menu-toggle {
+  font-family: OT Neue Montreal Bold Semi Squeezed;
+  font-size: 40px;
+  display: none;
+  cursor: pointer;
+  padding-right: 32px;
+}
+
+.mobile-menu-overlay {
+  display: none;
+  padding-top: 28px;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ff6b42;
+  color: black;
+  align-items: center;
+  align-content: center;
+  animation: slideDown 0.5s ease-out;
+  overflow: auto;
+}
+
+.mobile-menu-overlay.slide-up {
+  animation: slideUp 0.5s ease-in-out forwards;
+}
+
+.mobile-menu {
+  margin-top: 10px;
+  font-family: OT Neue Montreal Book Squeezed;
+  font-size: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.header-logo-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 14px;
+}
+
+.close-icon-hd-mob {
+  max-height: 74px;
+  cursor: pointer;
+}
+
+.header-logo-mobile img {
+  max-width: 460px;
+  width: 23vw;
+  height: 100%;
+}
+
+.mobile-lang-selector {
+  bottom: 128px;
+  font-family: OT Neue Montreal Book Squeezed;
+  font-size: 74px;
+  align-self: self-start;
+  display: flex;
+  gap: 26px;
+  padding-left: 26px;
+  margin-top: 10px;
+}
+
+.header-ft-mob {
+  /* position: fixed; */
+  bottom: 0;
+  font-family: OT Neue Montreal Bold Squeezed;
+  font-size: 43px;
+  width: 100%;
+  align-self: self-start;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+
+.header-ft-mob a {
+  padding-left: 32px;
+  border-top: 1px solid #000;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* mobile */
+
+@media (max-width: 1140px) {
+  header {
+    padding-left: 14px;
+    z-index: 200;
+  }
+
+  .seletor-linguagem {
+    display: none;
+  }
+
+  .header-logo img {
+    min-width: 180px;
+    height: auto;
+  }
+  .header-logo-mobile img {
+    min-width: 180px;
+    height: auto;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  .header-menu {
+    display: none;
+  }
 }

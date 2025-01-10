@@ -24,6 +24,39 @@
       <span class=""> <a href="./galeria.html">Galeria</a></span>
       <span class=""><a href="./sobre.html">Sobre</a></span>
     </div>
+
+    <div class="menu-toggle">
+      <span>Menu</span>
+    </div>
+
+    <div class="mobile-menu-overlay">
+
+      <div class="header-logo-mobile">
+        <img src="./assets/imagens/CortesBrabos-logo.svg" alt="">
+
+        <img class="close-icon-hd-mob" src="./assets/imagens/close-icon.svg" alt="">
+      </div>
+
+      <div class="mobile-menu">
+        <span><a href="./home.html">Home</a></span>
+        <span><a href="./galeria.html">Galeria</a></span>
+        <span><a href="./sobre.html">Sobre</a></span>
+      </div>
+
+
+
+
+      <div class="header-ft-mob">
+
+        <div class="mobile-lang-selector">
+          <span class="pt-mob leng-selected">▪Pt</span>
+          <span class="en-mob">En</span>
+        </div>
+
+        <a href="https://www.instagram.com/cortesbrab0s/" target="_blank">@cortesbrab0s</a>
+        <a href="mailto:cortesbraboss@gmail.com">cortesbraboss@gmail.com</a>
+      </div>
+    </div>
   </header>
 
   <div class="carrossel-nav">
@@ -31,12 +64,12 @@
     <img id="nav-right" src="./assets/imagens/arrow_right_alt-2.svg" alt="navigation right">
   </div>
 
-  <main class="home-container">
-    <div class="home-carrossel">
+  <main class="home-container swiper">
+    <div class="home-carrossel swiper-wrapper">
 
-      <div class="image-home-wrapper"><img src="./assets/imagens/home/home-1.jpg" alt=""></div>
-      <div class="image-home-wrapper"><img src="./assets/imagens/home/home-2.jpg" alt=""></div>
-      <div class="image-home-wrapper"><img src="./assets/imagens/home/home-3.jpg" alt=""></div>
+      <div class="image-home-wrapper swiper-slide"><img src="./assets/imagens/home/home-1.jpg" alt=""></div>
+      <div class="image-home-wrapper swiper-slide"><img src="./assets/imagens/home/home-2.jpg" alt=""></div>
+      <div class="image-home-wrapper swiper-slide"><img src="./assets/imagens/home/home-3.jpg" alt=""></div>
     </div>
 
     <p class="image-home-info">Sinto Muito – Pelo Tosco, 2024.</p>
@@ -59,10 +92,14 @@
     </div>
 
   </footer>
+  <!-- swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!--  -->
   <script src="./script.js"></script>
-  <script src="./js/homeCarrossel.js"></script>
   <script src="./js/langSelect.js"></script>
-  <script src="./js/footerRelveal.js"></script>
+  <script src="./js/mobileHeader.js"></script>
+
+
 
 </body>
 

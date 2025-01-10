@@ -49,6 +49,7 @@
 }
 
 .enter-button {
+  max-width: 192px;
   display: flex;
   align-items: center;
   font-family: OT Neue Montreal Bold Semi Squeezed;
@@ -72,4 +73,32 @@
 .enter-button:hover {
   color: white;
   background-color: black;
+}
+
+/* mobile */
+@media (max-width: 650px) {
+  .left-to-right img {
+    max-width: 400px;
+    height: auto;
+  }
+
+  .scroll-item {
+    margin-left: -40px;
+  }
+
+  .enter-container {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .enter-button {
+    box-sizing: border-box;
+    max-width: unset;
+    justify-content: center;
+    width: 100%;
+  }
 }

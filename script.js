@@ -79,5 +79,5 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Define o texto inicial ao carregar a página
-  imageInfoElement.textContent = imageInfos[swiper.realIndex];
+  // imageInfoElement.textContent = imageInfos[swiper.realIndex];
 });

@@ -93,7 +93,8 @@ header {
   align-items: center;
   align-content: center;
   animation: slideDown 0.5s ease-out;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .mobile-menu-overlay.slide-up {

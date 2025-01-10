@@ -82,4 +82,8 @@
   .footer-wrapper {
     margin-top: 150px;
   }
+
+  .ft-galeria .footer-contact {
+    border: none;
+  }
 }

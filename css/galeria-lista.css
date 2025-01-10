@@ -61,3 +61,28 @@ body {
   height: 400px;
   transition: transform 0.1s ease;
 }
+
+@media (max-width: 1140px) {
+  .list-switch {
+    top: 0;
+    right: 0;
+    position: relative;
+    display: flex;
+    padding-top: 180px;
+    justify-content: center;
+  }
+
+  .list-mode {
+    padding-top: 24px;
+  }
+
+  .work-listmode-item {
+    font-family: OT Neue Montreal Book Semi Squeezed;
+    font-size: 60px;
+    width: 100%;
+  }
+
+  .plus-icon-button {
+    padding-top: 86px;
+  }
+}

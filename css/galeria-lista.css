@@ -87,4 +87,10 @@ body {
   .plus-icon-button {
     padding-top: 86px;
   }
+
+  .plus-icon-button {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 }

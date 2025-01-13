@@ -85,5 +85,6 @@
 
   .ft-galeria .footer-contact {
     border: none;
+    max-width: 100%;
   }
 }

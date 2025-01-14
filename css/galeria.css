@@ -171,7 +171,6 @@
   .gallery-wrapper {
     grid-template-columns: repeat(2, 1fr);
     overflow-x: hidden;
-    max-width: fit-content;
   }
 
   .img-gallery-container {

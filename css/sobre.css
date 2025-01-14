@@ -64,3 +64,70 @@
   transform: scale(8);
   opacity: 0.7;
 }
+
+.e-mail-container-mobile {
+  display: none;
+}
+
+@media (max-width: 1140px) {
+  .sobre-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding-top: 150px;
+    overflow: auto;
+  }
+
+  .imagem-sobre-container {
+    display: flex;
+    justify-content: center;
+    grid-row: 1;
+  }
+
+  .imagem-sobre-container img {
+    width: 80%;
+    max-width: 600px;
+    max-height: unset;
+  }
+
+  .bio-container {
+    margin-left: unset;
+    max-width: 100%;
+    margin-top: 50px;
+    padding: 0px 30px 0px 30px;
+    grid-row: 2;
+    padding-bottom: 50px;
+  }
+
+  .bio-container p {
+    font-size: 34px;
+    text-align: center;
+  }
+
+  .contato {
+    margin-left: unset;
+    font-size: 44px;
+    border-top: 1px solid #000;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    grid-row: 3;
+  }
+
+  .contato div {
+    padding-left: 32px;
+  }
+
+  .e-mail-container {
+    display: none;
+  }
+  .e-mail-container-mobile {
+    display: block;
+    border-top: 1px solid black;
+    padding-top: 30px;
+  }
+
+  .e-mail-container-mobile a {
+    font-family: "OT Neue Montreal Bold Squeezed";
+    font-size: 40px;
+    padding-left: 32px;
+  }
+}

@@ -160,12 +160,23 @@ header {
   padding-bottom: 10px;
 }
 
+.hd-pg-work {
+  background-color: unset;
+}
+
 /* mobile */
 
 @media (max-width: 1140px) {
   header {
     padding-left: 14px;
     z-index: 200;
+  }
+  .hd-pg-work {
+    background: linear-gradient(
+      0deg,
+      rgba(204, 222, 101, 0) 10%,
+      #8387a3 40%
+    ) !important;
   }
 
   .seletor-linguagem {

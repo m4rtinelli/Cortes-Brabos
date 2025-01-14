@@ -80,11 +80,15 @@
   }
 
   .footer-wrapper {
-    margin-top: 150px;
+    margin-top: 200px;
   }
 
   .ft-galeria .footer-contact {
     border: none;
     max-width: 100%;
+  }
+
+  .ft-work-page .footer-contact {
+    border: none !important;
   }
 }

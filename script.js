@@ -31,8 +31,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   new Swiper(".work-carrossel-wrapper", {
-    loop: false,
-    slidesPerView: "auto",
+    loop: true,
+    slidesPerView: "1",
+    centeredSlides: true,
 
     freeMode: {
       enabled: true,
@@ -43,6 +44,12 @@ document.addEventListener("DOMContentLoaded", () => {
     navigation: {
       nextEl: ".car-work-nav-front",
       prevEl: ".car-work-nav-back",
+    },
+
+    breakpoints: {
+      1140: {
+        slidesPerView: "auto",
+      },
     },
   });
 
@@ -77,7 +84,4 @@ document.addEventListener("DOMContentLoaded", () => {
     const currentIndex = swiper.realIndex; // Índice do slide atual (desconsiderando os duplicados do loop)
     imageInfoElement.textContent = imageInfos[currentIndex];
   });
-
-  // Define o texto inicial ao carregar a página
-  // imageInfoElement.textContent = imageInfos[swiper.realIndex];
 });

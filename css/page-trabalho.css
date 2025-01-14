@@ -84,3 +84,108 @@
   max-height: 850px;
   width: max-content;
 }
+
+.work-date-mobile {
+  display: none;
+}
+
+.back-button-mobile {
+  display: none;
+}
+
+.nav-mobile {
+  display: none;
+}
+
+@media (max-width: 1140px) {
+  .layout-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    padding-top: 150px;
+    justify-items: center;
+  }
+
+  .work-info-wrapper {
+    grid-row: 1;
+    grid-column: 1;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: unset;
+    margin-bottom: unset;
+    margin-bottom: 12px;
+  }
+
+  .back-button-mobile {
+    display: block;
+    font-family: OT Neue Montreal Book Squeezed;
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+
+  .work-title {
+    max-width: 340px;
+    font-size: 60px;
+    text-align: center;
+  }
+
+  .work-date {
+    display: none;
+  }
+
+  .work-carrossel-wrapper {
+    grid-row: 2;
+    grid-column: 1;
+    max-width: 100%;
+    z-index: 1;
+  }
+
+  .work-carrossel-nav {
+    grid-row: 1;
+    padding: unset;
+    margin: unset;
+  }
+
+  .carrossel-wrapper li img {
+    max-width: 380px;
+    width: auto;
+  }
+
+  .carrossel-wrapper {
+    gap: unset;
+  }
+
+  .carrossel-wrapper li {
+    display: flex;
+    justify-content: center;
+  }
+
+  .work-description-wrapper {
+    grid-row: 4;
+    padding: unset;
+    margin: unset;
+    width: 100%;
+    padding-bottom: 96px;
+  }
+
+  .work-carrossel-nav.nav-mobile {
+    display: flex;
+    padding: 30px 32px 42px 32px;
+  }
+
+  .work-carrossel-nav {
+    display: none;
+  }
+
+  .work-date-mobile {
+    display: block;
+    grid-row: 3;
+    grid-column: 1;
+    width: 100%;
+
+    font-family: OT Neue Montreal Bold Semi Squeezed;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 69px;
+  }
+}

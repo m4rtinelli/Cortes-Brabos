@@ -1,5 +1,5 @@
 <?php
-// Template Name: Trabalhos
+// Template Name: Single Trabalhos
 ?>
 
 <?php get_header(); ?>
@@ -22,9 +22,9 @@
     </div>
 
     <div class="header-menu">
-      <span class="selected"><a href="./home.html">▪Home</a></span>
-      <span class=""> <a href="./galeria.html">Galeria</a></span>
-      <span class=""><a href="./sobre.html">Sobre</a></span>
+    <span class="selected"><a href="/home/">Home</a></span>
+      <span class=""> <a href="/galeria/">▪Galeria</a></span>
+      <span class=""><a href="/sobre/">Sobre</a></span>
     </div>
 
     <div class="menu-toggle">
@@ -40,9 +40,9 @@
       </div>
 
       <div class="mobile-menu">
-        <span><a href="./home.html">Home</a></span>
-        <span><a href="./galeria.html">Galeria</a></span>
-        <span><a href="./sobre.html">Sobre</a></span>
+      <span class="selected"><a href="/home/">Home</a></span>
+      <span class=""><a href="/galeria/">Galeria</a></span>
+      <span class=""><a href="/sobre/">Sobre</a></span>
       </div>
 
 

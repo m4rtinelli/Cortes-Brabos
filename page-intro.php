@@ -27,8 +27,8 @@
 
     <div class="enter-container">
 
-      <div class="enter-button"><a href="./home.html">Entrar </a><span>⮡</span></div>
-      <div class="enter-button"><a href="./home.html">Enter </a><span>⮡</span></div>
+      <div class="enter-button"><a href="./home/">Entrar </a><span>⮡</span></div>
+      <div class="enter-button"><a href="./home/">Enter </a><span>⮡</span></div>
     </div>
 
   </main>

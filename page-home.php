@@ -8,6 +8,8 @@
   <title>Cortes Brabos</title>
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>./style.css">
 </head>
+<?php if( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
 
 <body>
   <header>
@@ -21,9 +23,9 @@
     </div>
 
     <div class="header-menu">
-      <span class="selected"><a href="./home.html">▪Home</a></span>
-      <span class=""> <a href="./galeria.html">Galeria</a></span>
-      <span class=""><a href="./sobre.html">Sobre</a></span>
+    <span class="selected"><a href="/home/">▪Home</a></span>
+      <span class=""> <a href="/galeria/">Galeria</a></span>
+      <span class=""><a href="/sobre/">Sobre</a></span>
     </div>
 
     <div class="menu-toggle">
@@ -39,9 +41,9 @@
       </div>
 
       <div class="mobile-menu">
-        <span><a href="./home.html">Home</a></span>
-        <span><a href="./galeria.html">Galeria</a></span>
-        <span><a href="./sobre.html">Sobre</a></span>
+        <span><a href="/home/">Home</a></span>
+        <span><a href="/galeria/">Galeria</a></span>
+        <span><a href="/sobre/">Sobre</a></span>
       </div>
 
 
@@ -68,10 +70,26 @@
   <main class="home-container swiper">
     <div class="home-carrossel swiper-wrapper">
 
-      <div class="image-home-wrapper swiper-slide"><img src="./assets/imagens/home/home-1.jpg" alt=""></div>
-      <div class="image-home-wrapper swiper-slide"><img src="./assets/imagens/home/home-2.jpg" alt=""></div>
-      <div class="image-home-wrapper swiper-slide"><img src="./assets/imagens/home/home-3.jpg" alt=""></div>
+
+    <?php 
+    $imagens_home = get_field2('imagens_home_group');
+
+if(isset($imagens_home)) { foreach($imagens_home as $imagem_home) {
+
+    ?>
+
+      <div class="image-home-wrapper swiper-slide">
+        <img src="<?php echo $imagem_home['imagem_home']; ?>" alt="Imagem Home">
+      </div>
+
+    <?php 
+}}
+    ?>
+ 
+
+
     </div>
+    
 
     <p class="image-home-info">Sinto Muito – Pelo Tosco, 2024.</p>
   </main>
@@ -101,5 +119,5 @@
   <script src="./js/langSelect.js"></script>
   <script src="./js/mobileHeader.js"></script>
 
-
+  <?php endwhile; else : endif; ?>
   <?php get_footer(); ?>

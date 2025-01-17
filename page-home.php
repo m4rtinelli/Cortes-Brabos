@@ -74,7 +74,7 @@
     <?php 
     $imagens_home = get_field2('imagens_home_group');
 
-if(isset($imagens_home)) { foreach($imagens_home as $imagem_home) {
+    if(isset($imagens_home)) { foreach($imagens_home as $imagem_home) {
 
     ?>
 
@@ -83,7 +83,7 @@ if(isset($imagens_home)) { foreach($imagens_home as $imagem_home) {
       </div>
 
     <?php 
-}}
+    }}
     ?>
  
 

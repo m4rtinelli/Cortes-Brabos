@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+// Template Name: Sobre
+?>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<?php get_header(); ?>
+
   <meta name="theme-color" content="#ccde65">
   <title>Cortes Brabos</title>
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>./style.css">
 </head>
 
 <body>
@@ -98,7 +98,6 @@
   <!--  -->
   <script src="./js/langSelect.js"></script>
   <script src="./js/sobre.js"></script>
-  <script src="./js/mobileHeader.js"></script>
-</body>
-
-</html>
+  <script src="./js/mobileHeader.js"></script>]
+  
+  <?php get_footer(); ?>

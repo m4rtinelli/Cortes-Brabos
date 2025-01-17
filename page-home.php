@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+// Template Name: Home
+?>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<?php get_header(); ?>
+
   <meta name="theme-color" content="#ffffff">
   <title>Cortes Brabos</title>
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>./style.css">
 </head>
 
 <body>
@@ -17,7 +17,7 @@
     </div>
 
     <div class="header-logo">
-      <img src="./assets/imagens/CortesBrabos-logo.svg" alt="">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>./assets/imagens/CortesBrabos-logo.svg" alt="">
     </div>
 
     <div class="header-menu">
@@ -35,7 +35,7 @@
       <div class="header-logo-mobile">
         <img src="./assets/imagens/CortesBrabos-logo.svg" alt="">
 
-        <img class="close-icon-hd-mob" src="./assets/imagens/close-icon.svg" alt="">
+        <img class="close-icon-hd-mob" src="<?php echo get_stylesheet_directory_uri(); ?>./assets/imagens/close-icon.svg" alt="close icon">
       </div>
 
       <div class="mobile-menu">
@@ -61,8 +61,8 @@
   </header>
 
   <div class="carrossel-nav">
-    <img id="nav-left" src="./assets/imagens/arrow_right_alt.svg" alt="navigation left">
-    <img id="nav-right" src="./assets/imagens/arrow_right_alt-2.svg" alt="navigation right">
+    <img id="nav-left" src="<?php echo get_stylesheet_directory_uri(); ?>./assets/imagens/arrow_right_alt.svg" alt="navigation left">
+    <img id="nav-right" src="<?php echo get_stylesheet_directory_uri(); ?>./assets/imagens/arrow_right_alt-2.svg" alt="navigation right">
   </div>
 
   <main class="home-container swiper">
@@ -84,12 +84,13 @@
     </div>
 
     <div class=" footer-wrapper">
-      <img src="./assets/imagens/CortesBrabos-logo.svg" alt="Logo Cortes Brabos">
-      <img src="./assets/imagens/CortesBrabos-logo.svg" alt="Logo Cortes Brabos">
-      <img src="./assets/imagens/CortesBrabos-logo.svg" alt="Logo Cortes Brabos">
-      <img src="./assets/imagens/CortesBrabos-logo.svg" alt="Logo Cortes Brabos">
-      <img src="./assets/imagens/CortesBrabos-logo.svg" alt="Logo Cortes Brabos">
-      <img src="./assets/imagens/CortesBrabos-logo.svg" alt="Logo Cortes Brabos">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>./assets/imagens/CortesBrabos-logo.svg" alt="Logo Cortes Brabos">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>./assets/imagens/CortesBrabos-logo.svg" alt="Logo Cortes Brabos">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>./assets/imagens/CortesBrabos-logo.svg" alt="Logo Cortes Brabos">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>./assets/imagens/CortesBrabos-logo.svg" alt="Logo Cortes Brabos">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>./assets/imagens/CortesBrabos-logo.svg" alt="Logo Cortes Brabos">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>./assets/imagens/CortesBrabos-logo.svg" alt="Logo Cortes Brabos">
+
     </div>
 
   </footer>
@@ -101,7 +102,4 @@
   <script src="./js/mobileHeader.js"></script>
 
 
-
-</body>
-
-</html>
+  <?php get_footer(); ?>

@@ -74,12 +74,15 @@
     <?php 
     $imagens_home = get_field2('imagens_home_group');
 
+
+
     if(isset($imagens_home)) { foreach($imagens_home as $imagem_home) {
 
     ?>
 
       <div class="image-home-wrapper swiper-slide">
         <img src="<?php echo $imagem_home['imagem_home']; ?>" alt="Imagem Home">
+        <p class="image-home-info"><?php echo $imagem_home['info_img_home']; ?></p>
       </div>
 
     <?php 
@@ -91,7 +94,7 @@
     </div>
     
 
-    <p class="image-home-info">Sinto Muito – Pelo Tosco, 2024.</p>
+    <!-- <p class="image-home-info">Sinto Muito – Pelo Tosco, 2024.</p> -->
   </main>
 
   <footer class="footer-home">

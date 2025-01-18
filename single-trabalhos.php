@@ -4,6 +4,8 @@
 
 <?php get_header(); ?>
 
+<?php if( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
   <meta name="theme-color" content="  #8387a3">
 
   <title>Cortes Brabos</title>
@@ -18,7 +20,7 @@
     </div>
 
     <div class="header-logo">
-      <img src="./assets/imagens/CortesBrabos-logo.svg" alt="">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>./assets/imagens/CortesBrabos-logo.svg" alt="">
     </div>
 
     <div class="header-menu">
@@ -34,9 +36,9 @@
     <div class="mobile-menu-overlay">
 
       <div class="header-logo-mobile">
-        <img src="./assets/imagens/CortesBrabos-logo.svg" alt="">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>./assets/imagens/CortesBrabos-logo.svg" alt="">
 
-        <img class="close-icon-hd-mob" src="./assets/imagens/close-icon.svg" alt="">
+        <img class="close-icon-hd-mob" src="<?php echo get_stylesheet_directory_uri(); ?>./assets/imagens/close-icon.svg" alt="">
       </div>
 
       <div class="mobile-menu">
@@ -69,8 +71,9 @@
       </a>
 
       <h1 class="work-title">
-        Desfile Maxwell Alexandre + Pedra Preta
+        <?php the_title() ?>
       </h1>
+
       <span class="work-date">2024, SP.</span>
     </div>
 
@@ -81,89 +84,46 @@
     <section class="work-description-wrapper">
 
       <h2 class="work-description-title">
-        A convite de Maxwell Alexandre, desfile NOITES FRIAS SEM VC RMX na CASA SP-ARTE.
+      <?php the_field2('trabalho_subtitulo'); ?>
       </h2>
 
-      <span class="creative-director">Direção Criativa: Pedra<a href="https://www.instagram.com/pedrapreta/" target="_blank">@pedrapreta</a></span>
-
-      <span class="MUA">
-        MUA: Guta (@chicasintetaz), L444U (@l444u_), Gika (@gikagiki), Jeao (@jeaotito), Alma Negrot (@almanegrot), Edlene (@capturasdetela000),
-        Ictor (@ict0r), Pietra Pojo (@pietrapojo),
-        Hari (@a.hari___), Shankar (@era.shankar)
-      </span>
-
-      <span class="hair">
-        HAIR: Yuri (@cortesbrab0s), Albert (@albertcanalha)
-      </span>
-
-      <span class="styling">
-        Styling: Pedra y Alexza Paraiso (@paraisosweetgirlylovestory)
-      </span>
-
-      <span class="fotos">
-        Fotos by Bellato (@bellllato)
-      </span>
-
-      <span class="fotos">
-        Fotos Analógicas by Roma (@roma.romama)
-      </span>
-
-      <span class="acessorios">
-        Acessórios by Yhra (@yhra_yhra)
-      </span>
-
-      <span class="sound">
-        Soundtrack by Johitan Papi (@johitanpapiofc)
-      </span>
-
-      <span class="models">
-        Modeles: Kyra (@afrokyra), Taka (@misstacaca), Iuna (@iunamarya), Oda (@oda_cairu),
-        Clara Correa (@claracorreaz), Flora (@florababylon), Math Moreira (@mathmoreir), Belinda (@nouisditbelinda), Faela (@saintfaela), Kalunga (@ayo.klunga), Daniela Raio (@raio.daniela),
-        Kemet (@kemetkunt), Trindade (@trindadehgw),
-        Rato (@ratodistopico), Acan (@acanodara), Angeli Aniceto (@angelianiceto), Zure (@ozuree), Beatricy (beatric.y), Wiliano (_wiliano)
-      </span>
-
-      <span class="producao">
-        Produção: Vall Valoveras (@valloveras) e Larissa Duarte Amorim
-      </span>
-
-      <span class="realizacao">
-        Realização: Maxwell Alexandre @maxwellalexandre
-      </span>
+ <p>
+ <?php echo wpautop(get_field2('trabalho_descricao')); ?>
+ </p>
 
     </section>
 
     <section class="work-carrossel-wrapper swiper">
 
       <div class="work-carrossel-nav">
-        <img class="car-work-nav-back" src="./assets/imagens/arrow_right_alt.svg" alt="navigation back arrow">
+        <img class="car-work-nav-back" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/imagens/arrow_right_alt.svg" alt="navigation back arrow">
 
-        <img class="car-work-nav-front" src="./assets/imagens/arrow_right_alt-2.svg" alt="navigation forward arrow">
+        <img class="car-work-nav-front" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/imagens/arrow_right_alt-2.svg" alt="navigation forward arrow">
       </div>
 
       <ul class="carrossel-wrapper swiper-wrapper">
+      <?php 
+    $imagens_work_page = get_field2('imagens-work');
 
-        <li class="swiper-slide">
-          <img src="./assets/imagens/work-page/analógicas_roma-70_Original.JPG" alt="imagem do trabalho">
+if(isset($imagens_work_page)) { foreach($imagens_work_page as $imagem_work_page) {
+
+    ?>
+      <li class="swiper-slide">
+          <img src="<?php echo $imagem_work_page['imagem_w']; ?>" alt="imagem do trabalho">
         </li>
 
-        <li class="swiper-slide">
-          <img src="./assets/imagens/work-page/IMG_0249.jpeg" alt="imagem do trabalho">
-        </li>
+    <?php 
+}}
+    ?>
+      
+  
 
-        <li class="swiper-slide">
-          <img src="./assets/imagens/work-page/analógicas_roma-51_Original.JPG" alt="imagem do trabalho">
-        </li>
-
-        <li class="swiper-slide">
-          <img src="./assets/imagens/work-page/analógicas_roma-10_Original.JPG" alt="imagem do trabalho">
-        </li>
       </ul>
 
       <div class="work-carrossel-nav nav-mobile">
-        <img class="car-work-nav-back" src="./assets/imagens/arrow_right_alt.svg" alt="navigation back arrow">
+        <img class="car-work-nav-back" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/imagens/arrow_right_alt.svg" alt="navigation back arrow">
 
-        <img class="car-work-nav-front" src="./assets/imagens/arrow_right_alt-2.svg" alt="navigation forward arrow">
+        <img class="car-work-nav-front" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/imagens/arrow_right_alt-2.svg" alt="navigation forward arrow">
       </div>
 
     </section>
@@ -181,12 +141,12 @@
     </div>
 
     <div class=" footer-wrapper">
-      <img src="./assets/imagens/CortesBrabos-logo.svg" alt="Logo Cortes Brabos">
-      <img src="./assets/imagens/CortesBrabos-logo.svg" alt="Logo Cortes Brabos">
-      <img src="./assets/imagens/CortesBrabos-logo.svg" alt="Logo Cortes Brabos">
-      <img src="./assets/imagens/CortesBrabos-logo.svg" alt="Logo Cortes Brabos">
-      <img src="./assets/imagens/CortesBrabos-logo.svg" alt="Logo Cortes Brabos">
-      <img src="./assets/imagens/CortesBrabos-logo.svg" alt="Logo Cortes Brabos">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/imagens/CortesBrabos-logo.svg" alt="Logo Cortes Brabos">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/imagens/CortesBrabos-logo.svg" alt="Logo Cortes Brabos">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/imagens/CortesBrabos-logo.svg" alt="Logo Cortes Brabos">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/imagens/CortesBrabos-logo.svg" alt="Logo Cortes Brabos">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/imagens/CortesBrabos-logo.svg" alt="Logo Cortes Brabos">
+    
     </div>
 
   </footer>
@@ -194,8 +154,9 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!--  -->
 
-  <script src="script.js"></script>
+  <!-- <script src="script.js"></script>
   <script src="./js/langSelect.js"></script>
-  <script src="./js/mobileHeader.js"></script>
+  <script src="./js/mobileHeader.js"></script> -->
 
+  <?php endwhile; else : endif; ?>
   <?php get_footer(); ?>

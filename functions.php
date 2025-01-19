@@ -197,7 +197,7 @@ function cmb2_fields_trabalho(){
 				'name' => 'Imagem',
 				'id' => 'imagem_w',
 				'type' => 'file',
-				'preview_size' => [100, 100],
+				'preview_size' => [200, 200],
 				
 				'desc' => 'Lembre-se de sempre colocar a imagem no menor tamanho de arquivo possível, de preferência a JPG.',
 				
@@ -207,6 +207,77 @@ function cmb2_fields_trabalho(){
 				
 				]);
 }
+
+// pagina sobre
+add_action('cmb2_admin_init', 'cmb2_fields_sobre');
+
+function cmb2_fields_sobre(){
+	$cmbSobre = new_cmb2_box([
+
+		'id' => 'sobre_box',
+		
+		'title' => 'Sobre',
+		
+		'object_types' => ['page'],
+
+		'show_on' => [
+		
+		'key' => 'page-template',
+		
+		'value' => 'page-sobre.php',
+		
+		],
+		]);
+
+		$cmbSobre->add_field([
+			'name' => 'Biografia',
+			'id'   => 'biografia',
+			'type' => 'textarea',
+		]);
+
+		
+		$cmbSobre->add_field([
+			'name' => 'E-mail',
+			'id'   => 'email',
+			'type' => 'text',
+		]);
+
+		$cmbSobre->add_field([
+			'name' => 'Instagram Link',
+			'desc' => 'Aqui voce coloca o link do instagram',
+			'id'   => 'instagram_link',
+			'type' => 'text',
+		]);
+
+		$cmbSobre->add_field([
+			'name' => 'Telefone',
+			'desc' => 'Aqui voce coloca o celular',
+			'id'   => 'telefone',
+			'type' => 'text',
+		]);
+
+		$cmbSobre->add_field([
+			'name' => 'Instagram ',
+			'desc' => 'Aqui voce coloca o @ do instagram',
+			'id'   => 'instagram_arroba',
+			'type' => 'text',
+		]);
+
+		$cmbSobre->add_field([
+			'name' => 'Imagem Bio',
+			'id' => 'imagem_bio',
+			'type' => 'file',
+			'preview_size' => [100, 200],
+			
+			'desc' => 'Lembre-se de sempre colocar a imagem no menor tamanho de arquivo possível, de preferência a JPG.',
+			
+			'options' => [
+				'url' => false,
+			],
+			
+			]);
+}
+
 
 
 // -----------------------
@@ -249,3 +320,4 @@ function custom_post_type_trabalhos() {
 	));
 }
 add_action('init', 'custom_post_type_trabalhos');
+

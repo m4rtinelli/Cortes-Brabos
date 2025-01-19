@@ -23,8 +23,8 @@
 
     <div class="header-menu">
       <span class="selected"><a href="/home/">Home</a></span>
-      <span class=""> <a href="/galeria/">▪Galeria</a></span>
-      <span class=""><a href="/sobre/">Sobre</a></span>
+      <span class=""> <a href="/galeria/">Galeria</a></span>
+      <span class=""><a href="/sobre/">▪Sobre</a></span>
     </div>
 
     <div class="menu-toggle">

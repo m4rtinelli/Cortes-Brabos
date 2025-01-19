@@ -142,11 +142,87 @@ function cmb2_fields_home() {
 				
 				]);
 				
-				
-
-
 }
 
+// trabalhos principais
+add_action('cmb2_admin_init', 'cmb2_fields_principais');
+
+function cmb2_fields_principais(){
+
+	remove_post_type_support('principais', 'editor');
+
+	$cmbPrincipais = new_cmb2_box([
+
+		'id' => 'works_principal_box',
+		
+		'title' => 'Trabalhos',
+		
+		'object_types' => ['principais'],
+		
+		]);
+
+
+		$cmbPrincipais->add_field([
+			'name' => 'Subtitulo',
+			'id'   => 'subtitulo_principais',
+			'type' => 'text',
+		]);
+
+		$cmbPrincipais->add_field([
+			'name' => 'Ano',
+			'id'   => 'ano_principais',
+			'type' => 'text',
+		]);
+
+		$cmbPrincipais->add_field([
+			'name' => 'Descrição do trabalho (ficha tecnica)',
+			'id'   => 'descricao_principais',
+			'type' => 'textarea',
+		]);
+
+		$cmbPrincipais->add_field([
+			'name' => 'Imagem Pagina Galeria',
+			'id'   => 'imagem_thumb',
+			'type' => 'file',
+			'preview_size' => [50, 50],
+				
+			'desc' => 'Essa imagem é a que vai aparecer na pagina de Galeria como thumbnail',
+			
+			'options' => [
+				'url' => false,
+			],
+		]);
+
+
+		$imagens_principais = $cmbPrincipais->add_field([
+			'name' => 'Imagens',
+			'id' => 'imagens_w_principais',
+			'type' => 'group',
+			'repeatable' => true,
+			
+			
+			'options' => [
+				'group_title' => 'Imagem {#}',
+				'add_button' => 'Adicionar Imagem' ,
+				'sortable' => true,
+			],
+			
+			]);
+
+			$cmbPrincipais->add_group_field($imagens_principais, [
+				'name' => 'Imagem',
+				'id' => 'imagem_w_principal',
+				'type' => 'file',
+				'preview_size' => [200, 200],
+				
+				'desc' => 'Lembre-se de sempre colocar a imagem no menor tamanho de arquivo possível, de preferência a JPG.',
+				
+				'options' => [
+					'url' => false,
+				],
+				
+				]);
+}
 
 // pagina individual trabalho
 add_action('cmb2_admin_init', 'cmb2_fields_trabalho');
@@ -166,8 +242,13 @@ function cmb2_fields_trabalho(){
 
 		$cmbWorks->add_field([
 			'name' => 'Subtitulo',
-			
 			'id'   => 'trabalho_subtitulo',
+			'type' => 'text',
+		]);
+
+		$cmbWorks->add_field([
+			'name' => 'Data',
+			'id'   => 'trabalho_data',
 			'type' => 'text',
 		]);
 
@@ -178,6 +259,18 @@ function cmb2_fields_trabalho(){
 			'type' => 'textarea',
 		]);
 
+		$cmbWorks->add_field([
+			'name' => 'Imagem Thumb',
+			'id'   => 'trabalho_thumb',
+			'type' => 'file',
+			'preview_size' => [50, 50],
+				
+				'desc' => 'Essa imagem é a que vai aparecer no carrossel da pagina Galeria',
+				
+				'options' => [
+					'url' => false,
+				],
+		]);
 		$imagens_works = $cmbWorks->add_field([
 			'name' => 'imagens',
 			'id' => 'imagens-work',
@@ -321,3 +414,38 @@ function custom_post_type_trabalhos() {
 }
 add_action('init', 'custom_post_type_trabalhos');
 
+// custom post type TRABALHOS PRINCIPAIS
+
+function custom_post_type_principais() {
+
+	register_post_type('principais', array(
+		'label' => 'principais',
+		'description' => 'principais',
+		'public' => true,
+		'show_ui' => true,
+		'show_in_menu' => true,
+		'capability_type' => 'post',
+		'map_meta_cap' => true,
+		'hierarchical' => false,
+		'rewrite' => array('slug' => 'principais', 'with_front' => true),
+		'query_var' => true,
+		'supports' => array('title', 'editor', 'page-attributes','post-formats'),
+
+		'labels' => array (
+			'name' => 'principais',
+			'singular_name' => 'principais',
+			'menu_name' => 'Trabalhos Principais',
+			'add_new' => 'Adicionar Novo',
+			'add_new_item' => 'Adicionar Novo Trabalho',
+			'edit' => 'Editar',
+			'edit_item' => 'Editar principais',
+			'new_item' => 'Novo principais',
+			'view' => 'Ver principais',
+			'view_item' => 'Ver principais',
+			'search_items' => 'Procurar Trabalho',
+			'not_found' => 'Nenhum Trabalho Encontrado',
+			'not_found_in_trash' => 'Nenhum Trabalho Encontrado no Lixo',
+		)
+	));
+}
+add_action('init', 'custom_post_type_principais');

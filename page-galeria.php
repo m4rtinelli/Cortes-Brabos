@@ -4,6 +4,8 @@
 
 <?php get_header(); ?>
 
+<?php if( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
   <meta name="theme-color" content="#ffffff">
   <!-- swiper -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -20,7 +22,7 @@
     </div>
 
     <div class="header-logo">
-      <img src="./assets/imagens/CortesBrabos-logo.svg" alt="">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/imagens/CortesBrabos-logo.svg" alt="">
     </div>
 
     <div class="header-menu">
@@ -36,7 +38,7 @@
     <div class="mobile-menu-overlay">
 
       <div class="header-logo-mobile">
-        <img src="./assets/imagens/CortesBrabos-logo.svg" alt="">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/imagens/CortesBrabos-logo.svg" alt="">
 
         <img class="close-icon-hd-mob" src="./assets/imagens/close-icon.svg" alt="">
       </div>
@@ -70,121 +72,99 @@
   <main class="main-gallery">
     <div class="gallery-wrapper">
 
-      <div class="img-gallery-container">
-        <a href="./page-trabalho.html"><img src="./assets/imagens/galeria/galeria-1.jpg" alt="Foto do trabalho"></a>
-        <div class="gallery-work-info">
-          <p>Nome do Trabalho</p>
-          <p>2000</p>
-        </div>
-      </div>
+    <?php 
+    $args = array(
+      'post_type' => 'principais',
+       'order' => 'ASC'
+    );
+
+   
+
+    $the_query = new WP_Query ( $args );
+    ?>
+
+<?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
       <div class="img-gallery-container">
-        <a href=""><img src="./assets/imagens/galeria/galeria-2.jpg" alt="Foto do trabalho"></a>
+        <a href="<?php the_permalink(); ?>"><img src="<?php the_field2('imagem_thumb') ?>" alt="Foto do trabalho"></a>
         <div class="gallery-work-info">
-          <p>Nome do Trabalho</p>
-          <p>2000</p>
+          <p><?php the_title() ?></p>
+          <p><?php the_field2('ano_principais') ?></p>
         </div>
       </div>
+      <?php endwhile; else: endif; ?>
 
-      <div class="img-gallery-container">
-        <a href=""><img src="./assets/imagens/galeria/galeria-3.jpg" alt="Foto do trabalho"></a>
-        <div class="gallery-work-info">
-          <p>Nome do Trabalho</p>
-          <p>2000</p>
-        </div>
-      </div>
-
-      <!--  -->
-      <div class="img-gallery-container">
-        <a href=""><img src="./assets/imagens/galeria/galeria-4.jpg" alt="Foto do trabalho"></a>
-        <div class="gallery-work-info">
-          <p>Nome do Trabalho</p>
-          <p>2000</p>
-        </div>
-      </div>
-
-      <div class="img-gallery-container">
-        <a href=""><img src="./assets/imagens/galeria/galeria-5.jpg" alt="Foto do trabalho"></a>
-        <div class="gallery-work-info">
-          <p>Nome do Trabalho</p>
-          <p>2000</p>
-        </div>
-      </div>
-
-      <div class="img-gallery-container">
-        <a href=""><img src="./assets/imagens/galeria/galeria-6.jpg" alt="Foto do trabalho"></a>
-        <div class="gallery-work-info">
-          <p>Nome do Trabalho</p>
-          <p>2000</p>
-        </div>
-      </div>
-
-      <!--  -->
-      <div class="img-gallery-container">
-        <a href=""><img src="./assets/imagens/galeria/galeria-7.jpg" alt="Foto do trabalho"></a>
-        <div class="gallery-work-info">
-          <p>Nome do Trabalho</p>
-          <p>2000</p>
-        </div>
-      </div>
-
-      <div class="img-gallery-container">
-        <a href=""><img src="./assets/imagens/galeria/galeria-8.jpg" alt="Foto do trabalho"></a>
-        <div class="gallery-work-info">
-          <p>Nome do Trabalho</p>
-          <p>2000</p>
-        </div>
-      </div>
-
-      <div class="img-gallery-container">
-        <a href=""><img src="./assets/imagens/galeria/galeria-9.jpg" alt="Foto do trabalho"></a>
-        <div class="gallery-work-info">
-          <p>Nome do Trabalho</p>
-          <p>2000</p>
-        </div>
-      </div>
     </div>
 
   </main>
 
+  <!-- extra works wrapper -->
   <section class="extra-works-wrapper">
+
     <div class="carrossel-title">
       <p>Outros projetos</p>
     </div>
+
     <div class="nav-slider-container swiper">
+
       <div class="works-nav-back">
-        <img src="./assets/imagens/arrow_right_alt.svg" alt="">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/imagens/arrow_right_alt.svg" alt="">
       </div>
+
       <div class="carrossel-limiter">
         <ul class="works-slider-container swiper-wrapper">
+          
+<!-- trabalhos -->
+        <?php 
+    $args = array(
+      'post_type' => 'trabalhos',
+       'order' => 'ASC'
+    );
 
-          <li class="work-item swiper-slide"><a href=""><img src="./assets/imagens/galeria extra/extra-1.jpg" alt=""></a>
-          </li>
-          <li class="work-item swiper-slide"><a href=""><img src="./assets/imagens/galeria extra/extra-2.png" alt=""></a>
-          </li>
-          <li class="work-item swiper-slide"><a href=""><img src="./assets/imagens/galeria extra/extra-3.jpg" alt=""></a>
-          </li>
-          <li class="work-item swiper-slide"><a href=""><img src="./assets/imagens/galeria extra/extra-4.jpg" alt=""></a>
-          </li>
-          <li class="work-item swiper-slide"><a href=""><img src="./assets/imagens/galeria extra/extra-5.jpg" alt=""></a>
-          </li>
-          <li class="work-item swiper-slide"><a href=""><img src="./assets/imagens/galeria extra/extra-5.jpg" alt=""></a>
-          </li>
-          <li class="work-item swiper-slide"><a href=""><img src="./assets/imagens/galeria extra/extra-5.jpg" alt=""></a>
-          </li>
-          <li class="work-item swiper-slide"><a href=""><img src="./assets/imagens/galeria extra/extra-5.jpg" alt=""></a>
-          </li>
+    $the_query = new WP_Query ( $args );
+
+    ?>
+
+        <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+
+          <li class="work-item swiper-slide"><a href="<?php the_permalink() ?>"><img src="<?php the_field2('trabalho_thumb') ?>" alt=""></a>
+         
+          <?php endwhile; else: endif; ?>
+
+
+          <!-- principais -->
+
+          <?php 
+         $args = array(
+         'post_type' => 'principais',
+        'order' => 'ASC'
+       );
+
+   
+
+        $the_query = new WP_Query ( $args );
+       ?>
+
+       <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+       <li class="work-item swiper-slide"><a href="<?php the_permalink() ?>"><img src="<?php the_field2('imagem_thumb') ?>" alt=""></a>
+
+       <?php endwhile; else: endif; ?>
+
+
+
         </ul>
 
       </div>
 
 
       <div class="works-nav-forw ">
-        <img src="./assets/imagens/arrow_right_alt-2.svg" alt="">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/imagens/arrow_right_alt-2.svg" alt="">
       </div>
 
     </div>
-
+<!-- fim extra works -->
 
   </section>
 
@@ -192,28 +172,45 @@
   <section class="list-mode display-none">
     <ul class="work-listmode-wrapper">
 
-      <li class="work-listmode-item" data-img="./assets/imagens/galeria/galeria-1.jpg"><a href="">Desfile Maxwell Alexandre + Pedra Preta</a></li>
+<!-- trabalhos principais -->
+    <?php 
+    $args = array(
+      'post_type' => 'principais',
+       'order' => 'ASC'
+    );
 
-      <li class="work-listmode-item" data-img="./assets/imagens/galeria/galeria-2.jpg"><a href="">Desfile Dystopic Core Lab</a></li>
+   
 
-      <li class="work-listmode-item" data-img="./assets/imagens/galeria/galeria-3.jpg"><a href="">Esportes que abandonei</a></li>
+    $the_query = new WP_Query ( $args );
+    ?>
 
-      <li class="work-listmode-item" data-img="./assets/imagens/galeria/galeria-4.jpg"><a href="">DJ Bassan</a></li>
+<?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-      <li class="work-listmode-item" data-img="./assets/imagens/galeria/galeria-5.jpg"><a href="">DJ Alírio</a></li>
+      <li class="work-listmode-item" data-img="<?php the_field2('imagem_thumb') ?>"><a href=""><?php the_title() ?> </a></li>
 
-      <li class="work-listmode-item" data-img="./assets/imagens/galeria/galeria-6.jpg"><a href="">Sinto Muito - Pelo Tosco</a></li>
-
-      <li class="work-listmode-item" data-img="./assets/imagens/galeria/galeria-7.jpg"><a href="">SKINS Pirygótik</a></li>
-
-      <li class="work-listmode-item" data-img="./assets/imagens/galeria/galeria-8.jpg"><a href="">ROMA</a></li>
+      <?php endwhile; else: endif; ?>
 
 
+
+  <!-- //  trabalhos -->
+  <?php 
+    $args = array(
+      'post_type' => 'trabalhos',
+       'order' => 'ASC'
+    );
+    $the_query = new WP_Query ( $args );
+    ?>
+
+   <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+   <li class="work-listmode-item" data-img="<?php the_field2('trabalho_thumb') ?>"><a href=""><?php the_title() ?> </a></li>
+
+   <?php endwhile; else: endif; ?>
 
     </ul>
 
     <div class="plus-icon-button">
-      <img src="./assets/imagens/plus-icon.svg" alt="Plus icon">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/imagens/plus-icon.svg" alt="Plus icon">
     </div>
 
     <div class="hover-image"><img src="" alt=""></div>
@@ -229,12 +226,13 @@
     </div>
 
     <div class=" footer-wrapper">
-      <img src="./assets/imagens/CortesBrabos-logo.svg" alt="Logo Cortes Brabos">
-      <img src="./assets/imagens/CortesBrabos-logo.svg" alt="Logo Cortes Brabos">
-      <img src="./assets/imagens/CortesBrabos-logo.svg" alt="Logo Cortes Brabos">
-      <img src="./assets/imagens/CortesBrabos-logo.svg" alt="Logo Cortes Brabos">
-      <img src="./assets/imagens/CortesBrabos-logo.svg" alt="Logo Cortes Brabos">
-      <img src="./assets/imagens/CortesBrabos-logo.svg" alt="Logo Cortes Brabos">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/imagens/CortesBrabos-logo.svg" alt="Logo Cortes Brabos">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/imagens/CortesBrabos-logo.svg" alt="Logo Cortes Brabos">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/imagens/CortesBrabos-logo.svg" alt="Logo Cortes Brabos">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/imagens/CortesBrabos-logo.svg" alt="Logo Cortes Brabos">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/imagens/CortesBrabos-logo.svg" alt="Logo Cortes Brabos">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/imagens/CortesBrabos-logo.svg" alt="Logo Cortes Brabos">
+    
     </div>
 
   </footer>
@@ -243,16 +241,16 @@
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <script src="script.js"></script>
+  <!-- <script src="script.js"></script> -->
   <!--  -->
-  <script src="./js/langSelect.js"></script>
+  <!-- <script src="./js/langSelect.js"></script>
   <script src="./js/gallery.js"></script>
   <script src="./js/listSwitch.js"></script>
-  <script src="./js/mobileHeader.js"></script>
+  <script src="./js/mobileHeader.js"></script> -->
 
 
 
-
+  <?php endwhile; else : endif; ?>
 
 
   <?php get_footer(); ?>
